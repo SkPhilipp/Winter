@@ -7,4 +7,4 @@ winter.registerModules(require, {
     'main': './samples/main'
 });
 
-winter.link();
+winter.link().done();
