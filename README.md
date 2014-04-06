@@ -6,23 +6,24 @@ Winter can do dependency injection without being intrusive on your existing code
     // hello.js
 
     module.exports = function(){
-        return "Hello";
+        this.message = "Hello";
     };
 
     // main.js
 
     module.exports = function(logger, hello){
-        logger.info(hello);
+        logger.info(hello.message);
     };
 
     // index.js
 
+    var Winter = require('winter');
     var winter = new Winter();
 
     winter.register('logger', new Winter.LoggerProvider());
 
     winter.registerModules(require, {
-        'main': './main'
+        'main': './main',
         'hello': './hello'
     });
 
@@ -31,6 +32,8 @@ Winter can do dependency injection without being intrusive on your existing code
 This will output
 
     [2014-04-06 16:06:09.104] [INFO] main - Hello
+
+For static values like the above `"Hello"` string, it is better to use `Winter.ValueProvider`.
 
 Additionally
 ------------
