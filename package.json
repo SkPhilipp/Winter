@@ -7,5 +7,7 @@
     "dependencies": {
         "q": "~1.0.1"
     },
-    "devDependencies": {}
+    "devDependencies": {
+        "log4js": "~0.6.12"
+    }
 }

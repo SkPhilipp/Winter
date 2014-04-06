@@ -1,4 +1,4 @@
 module.exports = function(files){
     console.log('logger:', arguments);
-    this.name = 'logger';
+    this._name = 'logger';
 };

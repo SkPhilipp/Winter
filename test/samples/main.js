@@ -1,4 +1,4 @@
-module.exports = function(logger, files){
+module.exports = function(logger, files, log4js){
     console.log('main:', arguments);
-    this.name = 'main';
+    this._name = 'main';
 };
