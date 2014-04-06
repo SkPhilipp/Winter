@@ -39,7 +39,7 @@ Additionally
 ------------
 
 - You can create custom providers like `LoggerProvider`, check out the sources; it's easy.
-- Winter works with `q` promises; providers are can freely return promises instead of instances directly.
-- Registering a module more than once on the same name will overwrite the earlier module.
+- Winter works with `q` promises; providers can freely return promises instead of instances directly.
+- Registering a provider more than once on the same name will overwrite the previous provider for that name.
 - Winter's `link` should only be called once, and all providers should be registered before calling `link`.
 - Cyclic and missing dependencies cause `link`'s promise to fail, with information on whats wrong or missing.
