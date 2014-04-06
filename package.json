@@ -1,6 +1,6 @@
 {
     "name": "winter",
-    "description": "dependency injection",
+    "description": "Dependency injection that doesn't require you to change your code",
     "homepage": "https://github.com/SkPhilipp/Winter",
     "version": "1.0.0",
     "main": "lib/index.js",

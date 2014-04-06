@@ -42,4 +42,4 @@ Additionally
 - Winter works with `q` promises; providers are can freely return promises instead of instances directly.
 - Registering a module more than once on the same name will overwrite the earlier module.
 - Winter's `link` should only be called once, and all providers should be registered before calling `link`.
-- Cyclic or missing dependencies are detected and logged to `console.error`.
+- Cyclic and missing dependencies cause `link`'s promise to fail, with information on whats wrong or missing.
