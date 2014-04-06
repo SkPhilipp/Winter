@@ -112,6 +112,7 @@ created the logger with the name of `main`, so now you will never again have to 
 Additionally
 ------------
 
-- Winter works with `q` promises, meaning a Provider can return a promise of an instance instead of an instance.
+- Winter works with `q` promises; Providers are allowed to return promises of an instance instead of an instance.
 - Registering a module more than once on the same name will overwrite the earlier module.
 - Winter's `link` should only be called once, and all providers should be registered before calling `link`.
+- Cyclic or missing dependencies are detected and logged to `console.error`.

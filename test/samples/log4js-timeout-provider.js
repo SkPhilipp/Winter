@@ -1,3 +1,4 @@
+var Q = require('q');
 var log4js = require('log4js');
 
 var Log4jsProvider = function(){
@@ -12,7 +13,11 @@ Log4jsProvider.prototype.instantiate = function (providers, name) {
         return null;
     }
     else{
-        return log4js.getLogger(name);
+        var deferred = Q.defer();
+        setTimeout(function(){
+            deferred.resolve(log4js.getLogger(name));
+        }, 100);
+        return deferred.promise;
     }
 };
 
