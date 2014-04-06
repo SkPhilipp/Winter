@@ -1,4 +1,3 @@
-# generated files
 bin/
 gen/
 target/
@@ -13,7 +12,6 @@ tmp/**/*
 *.bak
 *.swp
 .settings/
-# PDT-specific
 .buildpath
 *.iml
 .idea/

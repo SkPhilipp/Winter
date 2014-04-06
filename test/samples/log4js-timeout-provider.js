@@ -1,7 +1,7 @@
 var Q = require('q');
 var log4js = require('log4js');
 
-var Log4jsProvider = function(){
+var Log4jsProvider = function () {
 };
 
 Log4jsProvider.prototype.dependencies = function () {
@@ -9,12 +9,12 @@ Log4jsProvider.prototype.dependencies = function () {
 };
 
 Log4jsProvider.prototype.instantiate = function (providers, name) {
-    if(name == undefined){
+    if (name == undefined) {
         return null;
     }
-    else{
+    else {
         var deferred = Q.defer();
-        setTimeout(function(){
+        setTimeout(function () {
             deferred.resolve(log4js.getLogger(name));
         }, 100);
         return deferred.promise;

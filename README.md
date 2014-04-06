@@ -1,7 +1,7 @@
 Winter
 ======
 
-Winter does dependency injection without being intrusive on your existing code.
+Winter can do dependency injection without being intrusive on your existing code.
 
 Basics
 ------

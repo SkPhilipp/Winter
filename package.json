@@ -1,7 +1,6 @@
 {
     "name": "winter",
     "description": "dependency injection",
-    "author": "philipp@hileco.com",
     "version": "0.0.1",
     "main": "lib/index.js",
     "dependencies": {
