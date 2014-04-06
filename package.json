@@ -1,12 +1,22 @@
 {
     "name": "winter",
     "description": "dependency injection",
-    "version": "0.0.1",
+    "homepage": "https://github.com/SkPhilipp/Winter",
+    "version": "1.0.0",
     "main": "lib/index.js",
     "dependencies": {
-        "q": "~1.0.1"
+        "q": "~1.0.1",
+        "log4js": "~0.*.*"
     },
-    "devDependencies": {
-        "log4js": "~0.6.12"
-    }
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/SkPhilipp/Winter.git"
+    },
+    "keywords": [
+        "dependency",
+        "injection",
+        "ioc",
+        "di"
+    ],
+    "license": "MIT"
 }
