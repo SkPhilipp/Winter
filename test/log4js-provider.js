@@ -7,14 +7,7 @@ Log4jsProvider.prototype.dependencies = function () {
     return [];
 };
 
-/**
- *
- * @param {Array} providers
- * @param {String} [name]
- * @return {Logger}
- */
 Log4jsProvider.prototype.instantiate = function (providers, name) {
-    console.log('being required for name:' + name);
     if(name == undefined){
         return null;
     }
