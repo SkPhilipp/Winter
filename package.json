@@ -2,7 +2,7 @@
     "name": "winter",
     "description": "Dependency injection that doesn't require you to change your code",
     "homepage": "https://github.com/SkPhilipp/Winter",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "main": "lib/index.js",
     "dependencies": {
         "q": "~1.0.1",
