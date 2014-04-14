@@ -4,38 +4,38 @@ Winter
 Winter can do dependency injection without being intrusive on your existing code.
 
 ```javascript
-    // hello.js
-    module.exports = function(){
-        this.message = "Hello";
-    };
+// hello.js
+module.exports = function(){
+    this.message = "Hello";
+};
 ```
 
 ```javascript
-    // main.js
-    module.exports = function(logger, hello){
-        logger.info(hello.message);
-    };
+// main.js
+module.exports = function(logger, hello){
+    logger.info(hello.message);
+};
 ```
 
 ```javascript
-    // index.js
-    var Winter = require('winter');
-    var winter = new Winter();
+// index.js
+var Winter = require('winter');
+var winter = new Winter();
 
-    winter.register('logger', new Winter.LoggerProvider());
+winter.register('logger', new Winter.LoggerProvider());
 
-    winter.registerModules(require, {
-        'main': './main',
-        'hello': './hello'
-    });
+winter.registerModules(require, {
+    'main': './main',
+    'hello': './hello'
+});
 
-    winter.link().done();
+winter.link().done();
 ```
 
 This will output
 
 ```
-    [2014-04-06 16:06:09.104] [INFO] main - Hello
+[2014-04-06 16:06:09.104] [INFO] main - Hello
 ```
 
 For static values like the above `"Hello"` string, it is better to use `Winter.ValueProvider`.
