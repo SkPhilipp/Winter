@@ -1,6 +1,8 @@
 Winter
 ======
 
+_This project is complete, no longer maintained and part of my source code "attic". Feel free to use it though, it works great!_
+
 Winter can do dependency injection without being intrusive on your existing code.
 
 ```javascript
